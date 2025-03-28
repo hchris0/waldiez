@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0.
 # Copyright (c) 2024 - 2025 Waldiez and contributors.
 # fmt: off
-# flake8: noqa E501
+# flake8: noqa: E501
 """Test waldiez.exporting.agents.rag_user.rag_user.*."""
 
 import os
@@ -47,9 +47,9 @@ def _get_rag_user(
         agent_type="rag_user",
         tags=[],
         requirements=[],
-        data=WaldiezRagUserData(  # type: ignore
+        data=WaldiezRagUserData(
             model_ids=["wm-1"],
-            retrieve_config=WaldiezRagUserRetrieveConfig(  # type: ignore
+            retrieve_config=WaldiezRagUserRetrieveConfig(
                 vector_db="chroma",
                 docs_path=[
                     doc_path,
@@ -58,7 +58,7 @@ def _get_rag_user(
                     r"file:///home/username/Documents/ New Folder",
                     "file:///home/username/Documents/ New Folder1",
                 ],
-                db_config=WaldiezRagUserVectorDbConfig(  # type: ignore
+                db_config=WaldiezRagUserVectorDbConfig(
                     use_local_storage=local_path is not None,
                     local_storage_path=local_path,
                 ),

@@ -19,7 +19,7 @@
 - If the flow is async, the `run` function is async.
 """
 
-# flake8: noqa E501
+# flake8: noqa: E501
 # pylint: disable=line-too-long
 
 from functools import partial
@@ -213,7 +213,7 @@ class FlowExporter(BaseExporter, ExporterMixin):
         content += imports[0] + "\n"
         content += get_np_no_nep50_handle() + "\n"
         content += self.get_comment("logging", self.for_notebook) + "\n"
-        content += get_start_logging(tabs=0) + "\n"
+        content += get_start_logging(is_async=is_async, tabs=0) + "\n"
         content += "start_logging()\n\n"
         if models_output:
             content += self.get_comment("models", self.for_notebook) + "\n"
